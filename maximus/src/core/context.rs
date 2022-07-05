@@ -15,9 +15,7 @@ pub struct Context {
 
 impl Context {
     pub fn constructor(configuration: crate::Configuration) -> Result<Self, ContextError> {
-        Ok(
-            Self { configuration }
-        )
+        Ok(Self { configuration })
     }
 
     pub fn new(configuration: crate::Configuration) -> Self {

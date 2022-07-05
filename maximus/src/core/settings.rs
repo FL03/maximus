@@ -13,7 +13,7 @@ pub struct Configuration {
     pub application: Application,
     pub database: Database,
     pub logger: Logger,
-    pub server: Server
+    pub server: Server,
 }
 
 impl Configuration {
@@ -22,14 +22,15 @@ impl Configuration {
             .set_default("application.mode", "development")?
             .set_default("application.name", "maximus")?
             .set_default("database.name", "postgres")?
-            .set_default("database.uri", "postgres://postgres:example@localhost:5432/postgres")?
+            .set_default(
+                "database.uri",
+                "postgres://postgres:example@localhost:5432/postgres",
+            )?
             .set_default("logger.level", "info")?;
 
         builder = builder.add_source(collect_config_files("**/*.config.*"));
         builder = builder.add_source(config::Environment::default().separator("__"));
-        Ok(
-            builder
-        )
+        Ok(builder)
     }
     pub fn new() -> Result<Self, config::ConfigError> {
         Self::constructor().ok().unwrap().build()?.try_deserialize()
@@ -81,7 +82,6 @@ mod components {
             write!(f, "Server(port={})", self.port)
         }
     }
-
 
     #[derive(Clone, Debug, Hash, PartialEq, serde::Deserialize, serde::Serialize)]
     pub struct Logger {
