@@ -5,13 +5,12 @@
     Description:
         ... Summary ...
  */
- 
- #[cfg(test)]
-mod tests {
 
+#[cfg(test)]
+mod tests {
     #[test]
     fn test() {
-        let f = | x: usize | x.pow(x.try_into().unwrap());
+        let f = |x: usize| x.pow(x.try_into().unwrap());
         assert_eq!(f(2), 4)
     }
 }

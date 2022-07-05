@@ -1,15 +1,10 @@
 [workspace]
-default-members = ["acme", "sdk"]
+default-members = [
+    "maximus"
+]
 
 members = [
-    "acme",
-    "chains",
-    "core",
-    "data",
-    "derive",
-    "macros",
-    "network",
-    "sdk"
+    "maximus"
 ]
 
 [profile.dev]

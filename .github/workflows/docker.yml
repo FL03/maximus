@@ -41,4 +41,4 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           push: true
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/acme:latest
+          tags: ${{ secrets.DOCKERHUB_USERNAME }}/maximus:latest

@@ -1,17 +1,23 @@
 /*
-    Appellation: mod
-    Context:
-    Creator: FL03 <jo3mccain@icloud.com>
-    Description:
-        ... Summary ...
- */
- 
- #[cfg(test)]
-mod tests {
+   Appellation: core
+   Context:
+   Creator: FL03 <jo3mccain@icloud.com>
+   Description:
+       ... Summary ...
+*/
+pub use crate::core::{common::*, context::*, settings::*};
 
-    #[test]
-    fn test() {
-        let f = | x: usize | x.pow(x.try_into().unwrap());
-        assert_eq!(f(2), 4)
-    }
+mod context;
+mod settings;
+
+mod common {
+    pub use constants::*;
+    pub use types::*;
+    pub use utils::*;
+
+    mod constants {}
+
+    mod types {}
+
+    mod utils {}
 }
