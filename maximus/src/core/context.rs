@@ -6,11 +6,23 @@
        ... Summary ...
 */
 
-use std::fmt::Formatter;
+pub type ContextError = Box<dyn std::error::Error + Send + Sync + 'static>;
 
 #[derive(Clone, Debug, Hash, PartialEq, serde::Deserialize, serde::Serialize)]
 pub struct Context {
     pub configuration: crate::Configuration,
+}
+
+impl Context {
+    pub fn constructor(configuration: crate::Configuration) -> Result<Self, ContextError> {
+        Ok(
+            Self { configuration }
+        )
+    }
+
+    pub fn new(configuration: crate::Configuration) -> Self {
+        Self::constructor(configuration).ok().unwrap()
+    }
 }
 
 impl std::fmt::Display for Context {

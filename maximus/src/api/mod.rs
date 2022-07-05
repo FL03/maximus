@@ -5,8 +5,8 @@
    Description:
        ... Summary ...
 */
-pub use crate::api::{endpoints::*, handlers::*, interface::*};
+pub use crate::api::{handlers::*, interface::*};
 
-mod endpoints;
+pub mod endpoints;
 mod handlers;
 mod interface;

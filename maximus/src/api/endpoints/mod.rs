@@ -5,6 +5,7 @@
    Description:
        ... Summary ...
 */
+pub mod index;
 
 #[cfg(test)]
 mod tests {
