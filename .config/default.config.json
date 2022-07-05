@@ -1,0 +1,9 @@
+{
+  "application": {
+    "mode": "development",
+    "name": "acme"
+  },
+  "logger": {
+    "level": "debug"
+  }
+}

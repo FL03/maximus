@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: cargo
+    directory: /crates/acme
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /crates/core
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /crates/data
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /crates/derive
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /crates/macros
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /crates/network
+    schedule:
+      interval: daily
+  - package-ecosystem: cargo
+    directory: /crates/sdk
+    schedule:
+      interval: daily
