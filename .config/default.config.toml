@@ -1,0 +1,14 @@
+[application]
+mode = "development"
+name = "maximus"
+
+[database]
+name = "postgres"
+uri = "postgres://postgres:example@localhost:5432/postgres"
+
+[logger]
+level = "debug"
+
+[server]
+host = "[0, 0, 0, 0]"
+port = 8000
