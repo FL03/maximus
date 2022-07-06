@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-docker compose -p "acme-compose" -f ".docker/docker-compose.yml" build
+docker compose -p "maximus" -f ".docker/docker-compose.yml" build
